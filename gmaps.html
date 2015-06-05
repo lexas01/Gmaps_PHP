@@ -1,0 +1,233 @@
+<html>
+<head>
+    <script
+            src="http://maps.googleapis.com/maps/api/js?sensor=true">
+    </script>
+    <script src="elabel.js" type="text/javascript"></script>
+
+    <script>
+
+
+        var direc =new google.maps.LatLng(32.302428, -115.076473);
+        var sMusica=new google.maps.LatLng(32.302205, -115.075982);
+        var sDanza=new google.maps.LatLng(32.302272, -115.075939);
+        var lbB=new google.maps.LatLng(32.302295, -115.076434);
+        var lbBasicas=new google.maps.LatLng(32.302785, -115.076254);
+        var sMaestros=new google.maps.LatLng(32.303010, -115.076273);
+        var lbLis=new google.maps.LatLng(32.303064, -115.076603);
+        var cafeteria=new google.maps.LatLng(32.303146, -115.076789);
+        var cedem=new google.maps.LatLng(32.302946, -115.076679);
+        var pDelAmor=new google.maps.LatLng(32.303022, -115.076671);
+        var estacionamiento=new google.maps.LatLng(32.302790, -115.077101);
+
+        var estJulio =new google.maps.LatLng(32.303068, -115.076907);
+        var entrada =new google.maps.LatLng(32.302716, -115.077735);
+        var estMaestros =new google.maps.LatLng(32.302526, -115.076158);
+        var cBasket =new google.maps.LatLng(32.300680, -115.072767);
+        var cBaseball=new google.maps.LatLng(32.299990, -115.073250);
+        var estMarginados =new google.maps.LatLng(32.302182, -115.075716);
+        var uabc=new google.maps.LatLng(32.302767, -115.076480);
+
+
+
+        var image = new google.maps.MarkerImage(
+                'http://upload.wikimedia.org/wikipedia/commons/7/70/UABC_Seal.PNG'
+                , new google.maps.Size(120,72));
+
+
+
+
+
+
+        var myCenter2=new google.maps.LatLng(50.508742,-0.120850);
+        var myCenter3=new google.maps.LatLng(52.508742,-0.120850);
+
+        function initialize()
+        {
+
+
+
+            var mapProp = {
+                center:uabc,
+                zoom:17,
+                mapTypeId:google.maps.MapTypeId.HYBRID
+            };
+
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+            var marker=new google.maps.Marker({
+                position:uabc,
+                title: 'UABC Escuela de Ingenieria y Negocios'
+
+            });
+
+            var marker0=new google.maps.Marker({
+                position:direc,
+                title: 'Dirrecion'
+            });
+
+            var marker1=new google.maps.Marker({
+                position:sMusica,
+                title: 'Salon de Musica'
+            });
+
+            var marker2=new google.maps.Marker({
+                position:sDanza,
+                title: 'Salon de Danza'
+            });
+
+            var marker3=new google.maps.Marker({
+                position:lbB,
+                title: 'Laboratorio B'
+            });
+
+            var marker4=new google.maps.Marker({
+                position:lbBasicas,
+                title: 'Laboratorio de ciencias basicas'
+            });
+
+            var marker5=new google.maps.Marker({
+                position:sMaestros,
+                title: 'Sala de maestros'
+            });
+
+            var marker6=new google.maps.Marker({
+                position:lbLis,
+                title: 'Laboratorio de Ingenieria de Software'
+            });
+
+            var marker7=new google.maps.Marker({
+                position:cafeteria,
+                title: 'Cafeteria'
+            });
+
+            var marker8=new google.maps.Marker({
+                position:cedem,
+                title: 'Centro Desarrollo Empresarial'
+            });
+
+            var marker9=new google.maps.Marker({
+                position:pDelAmor,
+                title: 'Portagarrafon del Amor xoxoxo'
+            });
+
+            var marker10=new google.maps.Marker({
+                position:estacionamiento,
+                title: 'Estacionamiento Principal'
+            });
+
+            var marker11=new google.maps.Marker({
+                position:estJulio,
+                title: 'Estacionamiento de Julio'
+            });
+
+            var marker12=new google.maps.Marker({
+                position:estMaestros,
+                title: 'Estacionamiento de Maestros'
+            });
+
+            var marker13=new google.maps.Marker({
+                position:estMarginados,
+                title: 'Estacionamiendo de los Marginados'
+            });
+
+            var marker14=new google.maps.Marker({
+                position:cBasket,
+                title: 'Cancha de Basketball'
+            });
+
+            var marker15=new google.maps.Marker({
+                position:cBaseball,
+                title: 'Campo de Baseball'
+            });
+
+            var marker16=new google.maps.Marker({
+                position:entrada,
+                title: 'Entrada'
+            });
+
+
+            marker.setMap(map);
+            marker0.setMap(map);
+            marker1.setMap(map);
+            marker2.setMap(map);
+            marker3.setMap(map);
+            marker4.setMap(map);
+            marker5.setMap(map);
+            marker6.setMap(map);
+            marker7.setMap(map);
+            marker8.setMap(map);
+            marker9.setMap(map);
+            marker10.setMap(map);
+            marker11.setMap(map);
+            marker12.setMap(map);
+            marker13.setMap(map);
+            marker14.setMap(map);
+            marker15.setMap(map);
+            marker16.setMap(map);
+
+
+
+            /////////////
+            google.maps.event.addListener(map, 'rightclick', function(event) {
+                placeMarker(event.latLng);
+            });
+
+            function placeMarker(location) {
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+                var infowindow = new google.maps.InfoWindow({
+                    content: 'Latitude: ' + location.lat() +
+                    '<br>Longitude: ' + location.lng()
+                });
+                infowindow.open(map,marker);
+            }
+            /////////////////////////////////////////////////////////////////////////////////////////////
+
+            ////// Marker
+            google.maps.event.addListener(marker, 'click', function() {
+                var infowindow = new google.maps.InfoWindow({
+
+                    content:"UABC Escuela de Ingenieria y Negocios"
+                });
+                infowindow.open(map,marker);
+            });
+
+
+
+            google.maps.event.addListener(marker,'dblclick',function() {
+                map.setZoom(20);
+                map.setCenter(marker.getPosition());
+
+            });
+            /////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+
+<body>
+<div id="googleMap" style="width:90%;height:90%;"></div>
+</body>
+</html>
