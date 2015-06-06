@@ -34,10 +34,12 @@ function refrescarUbicacion() {
 <script type="text/javascript">
 var x=document.getElementById("demo");
 function cargarmap(){
+
     navigator.geolocation.getCurrentPosition(showPosition,showError);
     function showPosition(position)
   {
       lat=position.coords.latitude;
+
       lon=position.coords.longitude;
       latlon=new google.maps.LatLng(lat, lon)
   mapholder=document.getElementById('mapholder')

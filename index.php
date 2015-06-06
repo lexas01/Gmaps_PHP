@@ -28,7 +28,7 @@
 
     for ($x = 1; $x <= 100; $x++) {
 
-        echo "<h1> Esta es una prueba de PHPStorm</h1>";
+        echo "<h1> Esta es una prueba de PHPStorm .</h1>";
 
     }
     if ($_GET['variableA'] == 1) {
